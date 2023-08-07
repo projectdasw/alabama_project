@@ -1,0 +1,83 @@
+{{ block title }}
+    Instructions Sheet
+    <hr>
+{{ endblock }}
+
+{{ block content}}
+    <h2>
+        <strong>1. Rules, Procedures and Decisions</strong>
+    </h2>
+    <p style="text-indent: 40px;">
+        Thank you for agreeing to participate in this experiment. Each participant of this experiment
+        is a member of a five-person group, which is randomly formed. No participant knows their
+        group members or which group they belong to.
+    </p>
+    <p>
+        <p style="margin: 0;">
+            <strong style="margin: 0 10px 0 0;">Procedures</strong> By now, you should have an envelope and a code
+            number card, which you randomly selected in front of the class. Please write your code number on the front
+            of the envelope and take care to keep the code number card as you need it to collect your payment.
+            Do not open your envelope until we ask you to. During the experiment, you can ask us
+            questions, but you are not allowed to talk to other participants.
+        </p>
+        <p style="text-indent: 40px; margin: 0;">
+            Before starting the experiment, please read this instructions sheet carefully. You will be
+            given 5 minutes to read this instructions. When the 5 minutes reading time is up, we will
+            hold a 5 minute Q&A session. Raise your hand if you have any questions and we will come
+            to you and answer your question individually. After the Q&A session, we will proceed to
+            the actual experiment by asking you to open your envelope. Then, fill out the questionnaire
+            and enter your decision in the sheet provided.
+        </p>
+        <p style="text-indent: 40px; margin: 0;">
+            After you have finished filling out the questionnaire and entering your decision, put this
+            instructions sheet and the decision sheet back into your envelope. When everyone has put
+            his/her sheets inside his/her envelope, we will collect all the envelopes and you can leave the
+            room. After next class meeting, we will distribute your payment.
+        </p>
+    </p>
+    <p>
+        <p style="margin: 0;">
+            <strong style="margin: 0 10px 0 0;">Decisions</strong> The decision you have to make in this experiment is
+            the following: each of you will be given 20 tokens of which you can keep or invest in a group account.
+            Simultaneously, all other members of your group have to make the similar decision. None of you will be able
+            to see the others’ decision or the total number of tokens invested in the group account.
+        </p>
+        <p style="text-indent: 40px; margin: 0;">
+            You have to enter your decision on the decision sheet provided inside your envelope. On
+            it, there will a box where <strong>you should circle the number of token(s) you want to invest in the group
+            account</strong>. The box will look like the following.
+        </p>
+        <div class="d-flex justify-content-center m-0">
+            <img src="{{ static 'token.png'}}" alt="token" style="width: 70%;">
+        </div>
+        <p style="text-indent: 40px; margin: 0;">
+            After deciding on how many token(s) you want to invest in the group account, we will
+            ask you to write down how many tokens do you think there are in the group account. Note
+            that this number has to be between 0 to 100.
+        </p>
+    </p>
+    <h2>
+        <strong>2. Payoff and how to get paid</strong>
+    </h2>
+    <p>
+        <p style="margin: 0;">
+            <strong style="margin: 0 10px 0 0;">Payoff</strong> The total number of tokens in your group account
+            will be doubled and divided evenly to all members of your group. For example, if you decide to invest 12
+            tokens and the total number of tokens in your group account is 60 tokens. Then, at the end of the
+            experiment, you will end up having: (20-12) tokens + ((60×2)/5) tokens = 8 tokens + 24 tokens = 32 tokens.
+        </p>
+    </p>
+    <p>
+        <p style="margin: 0;">
+            <strong style="margin: 0 10px 0 0;">How to get paid</strong> At the end of the experiment, the tokens you
+            earned from playing the game will be exchanged into dollars, with an exchange rate of 4 tokens for $1. Your
+            take-home payment will include: (1) participation payment of $3 and (2) the earnings you get from playing
+            the game.
+        </p>
+        <p style="text-indent: 40px; margin: 0;">
+            Payment will be distributed next class meeting. Please carefully keep your code number
+            card as it will be used to collect your payment.
+        </p>
+    </p>
+    {{ next_button }}
+{{ endblock }}

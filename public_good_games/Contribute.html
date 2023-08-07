@@ -1,0 +1,35 @@
+{{ extends "global/Page.html" }}
+{{ block title }}
+    Decision
+    <hr>
+{{ endblock }}
+
+{{ block content }}
+    <p>
+        This is a public goods game. Now, you are in a five-person group and each of you has been given 20 tokens.
+        Your tokens can either be kept or invested in the group account. The total number of tokens invested in
+        the group account will be doubled and divided evenly among all members of your group.
+    </p>
+    <h4>Please circle the number of token(s) you want to INVEST in the group account</h4>
+    <div class="d-flex flex-row justify-content-center" style="flex-wrap: wrap;">
+        {{ for choice in form.invest }}
+            <span class="p-3 fs-4" style="width: 13%; border: 1px solid #B7B7B7;">
+                {{ choice }} {{ choice.label }}
+            </span>
+        {{ endfor }}
+    </div>
+    <div class="mb-3 _formfield">
+        <label class="col-form-label" for="id_contribution">
+            How many tokens do you think are in your group account?
+        </label>
+        <div class="controls">
+            <div class="input-group input-group-narrow">
+                <input type="number" class="form-control" inputmode="numeric"id="id_contribution" max="100" min="0"
+                       name="contribution" required="" value="">
+                <span class="input-group-text">tokens</span>
+            </div>
+        </div>
+    </div>
+    <p>Please write a number between 0-100 in the space provided.</p>
+    {{ next_button }}
+{{ endblock }}
