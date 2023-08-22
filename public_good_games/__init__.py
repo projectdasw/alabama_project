@@ -5,7 +5,7 @@ class C(BaseConstants):
     NAME_IN_URL = 'public_good_games'
     PLAYERS_PER_GROUP = 5
     NUM_ROUNDS = 1
-    ENDOWMENT = cu(100)
+    ENDOWMENT = cu(20)
     MULTIPLIER = 2
 
 
@@ -38,12 +38,12 @@ def set_payoffs(group: Group):
     players = group.get_players()
     total_invest = [p.invest for p in players]
     group.total_contribution = sum(total_invest)
-    group.individual_share = (
-        (group.total_contribution * C.MULTIPLIER) / C.PLAYERS_PER_GROUP
-    )
     for p in players:
-        p.profit_tokens = (20 - p.invest + group.individual_share) / 4
-        p.payoff = (p.profit_tokens / 4)
+        group.individual_share = (
+            (C.ENDOWMENT - p.contribution) + ((group.total_contribution * C.MULTIPLIER) / C.PLAYERS_PER_GROUP)
+        )
+        p.profit_tokens = group.individual_share / 4
+        p.payoff = p.profit_tokens
 
 
 # PAGES
@@ -73,4 +73,5 @@ class FinalResults(Page):
     pass
 
 
-page_sequence = [InstructionsSheet, Questionnaire, Contribute, ResultsWaitPage, Results, FinalResults]
+# page_sequence = [InstructionsSheet, Questionnaire, Contribute, ResultsWaitPage, Results, FinalResults]
+page_sequence = [InstructionsSheet, Contribute, ResultsWaitPage, Results, FinalResults]
