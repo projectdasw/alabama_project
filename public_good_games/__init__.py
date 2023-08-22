@@ -73,5 +73,4 @@ class FinalResults(Page):
     pass
 
 
-# page_sequence = [InstructionsSheet, Questionnaire, Contribute, ResultsWaitPage, Results, FinalResults]
-page_sequence = [InstructionsSheet, Contribute, ResultsWaitPage, Results, FinalResults]
+page_sequence = [InstructionsSheet, Questionnaire, Contribute, ResultsWaitPage, Results, FinalResults]
